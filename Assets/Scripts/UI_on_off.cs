@@ -5,9 +5,10 @@ using UnityEngine;
 public class UI_on_off : MonoBehaviour
 {
     [SerializeField] GameObject UI;
-
+    
     public void UI_on()
     {
+        print("ASd");
         UI.SetActive(true);
     }
     
