@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class ButtonPressFunc : MonoBehaviour
 {
-    public void TriggerButtonPress()
+    public virtual void TriggerButtonPress()
     {
         Debug.Log("Button Pressed!");
     }
+
+    public virtual void TriggerButtonUp()
+    {
+        Debug.Log("Button Released!");
+    } 
 
     
 }

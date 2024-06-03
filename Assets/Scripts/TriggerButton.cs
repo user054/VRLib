@@ -29,7 +29,15 @@ public class TriggerButton : MonoBehaviour
     Coroutine triggerButtonPressCoroutine = null;
     private void OnHoverExited(HoverExitEventArgs args)
     {
-        hoveredObject = null;
+        if(hoveredObject != null)
+        {
+            if(hoveredObject.TryGetComponent(out ButtonPressFunc buttonPressFunc))
+            {
+                hoveredObject.GetComponent<ButtonPressFunc>().TriggerButtonUp();
+            }
+            hoveredObject = null;
+        }
+
         if (triggerButtonPressCoroutine != null)
         {
             StopCoroutine(triggerButtonPressCoroutine);
@@ -44,15 +52,31 @@ public class TriggerButton : MonoBehaviour
 
     IEnumerator TriggerButtonPress()
     {
-        print(controller.inputDevice);
+        //print(controller.inputDevice);
         bool isPressed = false;
         while(true)
         {
             InputHelpers.IsPressed(controller.inputDevice, InputHelpers.Button.TriggerButton, out isPressed);
-            if(isPressed == true)
+            if(hoveredObject != null)
             {
-                hoveredObject.GetComponent<ButtonPressFunc>().TriggerButtonPress();
+                if(isPressed == true)
+                {         
+                    if(hoveredObject.TryGetComponent(out ButtonPressFunc buttonPressFunc))
+                    {
+                        hoveredObject.GetComponent<ButtonPressFunc>().TriggerButtonPress();
+                    }
+                }
+                else
+                {
+                    //print("jkl");
+                    if(hoveredObject.TryGetComponent(out ButtonPressFunc buttonPressFunc))
+                    {
+                        hoveredObject.GetComponent<ButtonPressFunc>().TriggerButtonUp();
+                    }
+                    
+                }
             }
+
             yield return null;
         }
     }
