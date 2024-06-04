@@ -2588,6 +2588,14 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8305536733029170388, guid: 107cbb23bbd3b354ca90537cf3adb70b, type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8305536733029170388, guid: 107cbb23bbd3b354ca90537cf3adb70b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4911593626739e94095dc80f92f4b3af, type: 2}
     - target: {fileID: 8308899689299469123, guid: 107cbb23bbd3b354ca90537cf3adb70b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4
