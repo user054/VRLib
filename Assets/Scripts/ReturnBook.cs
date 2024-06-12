@@ -12,12 +12,6 @@ public class ReturnBook : MonoBehaviour
         curTransformrotation = transform.eulerAngles;
         rb = GetComponent<Rigidbody>();
     }
-
-    private void Update()
-    {
-        print(curTransformposition);
-        print(transform.position);
-    }
     
     public void REturnBook()
     {

@@ -1,5 +1,6 @@
 
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
@@ -12,12 +13,17 @@ public class BookRental : MonoBehaviour
 
     NextScene nextScene;
 
+    private void OnEnable()
+    {
+        isPressed = false;
+        StartCoroutine(BookRentalComplete());
+    }
+
 
     private void Start()
     {
         device = controller.inputDevice;
         nextScene = FindObjectOfType<NextScene>();
-        StartCoroutine(BookRentalComplete());
     }
 
     private void Update()
