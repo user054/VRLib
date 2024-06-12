@@ -13,4 +13,9 @@ public class MainSceneGameMgr : MonoBehaviour
 
     }
 
+    public void FadeOutStart()
+    {
+        fadeInOut.DisplayFadeInOutController(0, 0.0f, 1.0f, fadeSpeed);
+    }
+
 }

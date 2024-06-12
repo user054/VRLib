@@ -7,7 +7,7 @@ public class FadeInOut : MonoBehaviour
 {
     [SerializeField] Image fadeImage;
 
-    //fadeType = ÆäÀÌµå¸¦ ÀÎÇÒÁö ¾Æ¿ôÇÒÁö °í¸£´Â ÄÚµå(0 = ÆäÀÌµå¾Æ¿ô, 1 = ÆäÀÌµåÀÎ) fadeValue = ½ÃÀÛÇÒ ÀÌ¹ÌÁö ¾ËÆÄ°ª(0~1), finalFadeValue = ÃÖÁ¾ ÀÌ¹ÌÁö ¾ËÆÄ°ª(0~1), imageFadeSpeed = ¾ËÆÄ°ªÀÌ Áõ°¨ÇÏ´Â ¼Óµµ
+    //fadeType = ï¿½ï¿½ï¿½Ìµå¸¦ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Æ¿ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Úµï¿½(0 = ï¿½ï¿½ï¿½Ìµï¿½Æ¿ï¿½, 1 = ï¿½ï¿½ï¿½Ìµï¿½ï¿½ï¿½) fadeValue = ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ä°ï¿½(0~1), finalFadeValue = ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ä°ï¿½(0~1), imageFadeSpeed = ï¿½ï¿½ï¿½Ä°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Óµï¿½
     public void DisplayFadeInOutController(int fadeType, float fadeValue, float finalFadeValue, float imageFadeSpeed)
     {
         StartCoroutine(PanelFadeCoroutine( fadeType,  fadeValue,  finalFadeValue,  imageFadeSpeed));

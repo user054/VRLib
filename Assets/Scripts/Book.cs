@@ -10,11 +10,24 @@ public class Book : MonoBehaviour
     Transform originalTransform;
 
     [SerializeField] GameObject setUI;
+    [SerializeField] GameObject rentalUI;
     
     private void Start()
     {
         anim = GetComponent<Animator>();
         originalTransform = transform;
+    }
+
+    public void BookRentalUIActive()
+    {
+        UIMgr.instance.SetUI(rentalUI);
+        UIMgr.instance.DeactiveUI();
+        rentalUI.SetActive(true);
+    }
+
+    public void BookRentalUIFalse()
+    {
+        rentalUI.SetActive(false);
     }
 
     public void OpenBook()
