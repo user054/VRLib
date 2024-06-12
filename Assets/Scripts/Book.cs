@@ -35,6 +35,8 @@ public class Book : MonoBehaviour
         Debug.Log("Book Opened!");
         if(OpenBookCoroutineCheck == null)
         {
+            UIMgr.instance.SetUI(rentalUI);
+            UIMgr.instance.DeactiveUI();
             OpenBookCoroutineCheck = StartCoroutine(OpenBookCoroutine());
         }
            
