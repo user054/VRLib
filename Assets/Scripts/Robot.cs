@@ -13,7 +13,11 @@ public class Robot : ButtonPressFunc
 
     public override void TriggerButtonUp()
     {
-        robotUI[0].SetActive(false);
+        for (int i = 0; i < robotUI.Length; i++)
+        {
+            robotUI[i].SetActive(false);
+        }
+        //robotUI[0].SetActive(false);
     }
 
     void MainUiActive()
