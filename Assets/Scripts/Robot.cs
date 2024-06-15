@@ -56,16 +56,16 @@ public class Robot : ButtonPressFunc
 
                         if(imageIndex > robotUI.Length - 1)
                         {
-                            imageIndex = robotUI.Length - 1;
+                            imageIndex = 0;
                         }
                         else if(imageIndex < 0)
                         {
-                            imageIndex = 0;
+                            imageIndex = robotUI.Length - 1;
                         }
 
                         robotUI[imageIndex].SetActive(true);
 
-                        //yield return new WaitForSeconds(1.0f);
+                        yield return new WaitForSeconds(0.5f);
                         
                     }
                     else if(rightPressed == true)
@@ -75,16 +75,16 @@ public class Robot : ButtonPressFunc
 
                         if(imageIndex > robotUI.Length - 1)
                         {
-                            imageIndex = robotUI.Length - 1;
+                            imageIndex = 0;
                         }
                         else if(imageIndex < 0)
                         {
-                            imageIndex = 0;
+                            imageIndex = robotUI.Length - 1;
                         }
 
                         robotUI[imageIndex].SetActive(true);
 
-                        //yield return new WaitForSeconds(1.0f);
+                        yield return new WaitForSeconds(0.5f);
                     }
                     yield return null;
                 }   
