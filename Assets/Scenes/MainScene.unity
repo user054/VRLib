@@ -7470,7 +7470,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1220277216
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8159,8 +8159,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c625aa6770f1d2144a14242cf69c3137, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 1047362475}
   robotUI:
-  - {fileID: 1220277215}
+  - {fileID: 1623295692}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!65 &1505854495
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8424,12 +8428,12 @@ GameObject:
   - component: {fileID: 1623295695}
   - component: {fileID: 1623295694}
   m_Layer: 5
-  m_Name: Image
+  m_Name: MainImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1623295693
 RectTransform:
   m_ObjectHideFlags: 0
