@@ -19,7 +19,7 @@ public class Robot : ButtonPressFunc
     private void Update()
     {
         InputHelpers.IsPressed(controller.inputDevice, InputHelpers.Button.SecondaryButton, out leftPressed);
-        InputHelpers.IsPressed(controller.inputDevice, InputHelpers.Button.PrimaryButton, out rightPressed);   
+        InputHelpers.IsPressed(controller.inputDevice, InputHelpers.Button.PrimaryButton, out rightPressed);
     }
 
     public override void TriggerButtonPress()
